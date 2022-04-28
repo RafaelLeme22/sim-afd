@@ -1,0 +1,98 @@
+{
+    "states": [
+        {
+            "name": "Caminhar",
+            "connections": [
+                {
+                    "to":"Atacar",
+                    "conector": 1
+                },
+                {
+                    "to":"Desviar",
+                    "conector": 2
+                },
+                {
+                    "to":"Caminhar",
+                    "conector": 3
+                },
+                {
+                    "to":"Morrer",
+                    "conector": 4
+                }
+            ]
+        },
+        {
+            "name": "Morrer",
+            "connections": [
+                {
+                    "to":"Morrer",
+                    "conector": 1
+                },
+                {
+                    "to":"Morrer",
+                    "conector": 2
+                },
+                {
+                    "to":"Morrer",
+                    "conector": 3
+                },
+                {
+                    "to":"Morrer",
+                    "conector": 4
+                }
+            ]
+        },
+        {
+            "name": "Atacar",
+            "connections": [
+                {
+                    "to":"Atacar",
+                    "conector": 1
+                },
+                {
+                    "to":"Desviar",
+                    "conector": 2
+                },
+                {
+                    "to":"Caminhar",
+                    "conector": 3
+                },
+                {
+                    "to":"Morrer",
+                    "conector": 4
+                }
+            ]
+        },
+        {
+            "name": "Desviar",
+            "connections": [
+                {
+                    "to":"Atacar",
+                    "conector": 1
+                },
+                {
+                    "to":"Desviar",
+                    "conector": 2
+                },
+                {
+                    "to":"Caminhar",
+                    "conector": 3
+                },
+                {
+                    "to":"Morrer",
+                    "conector": 4
+                }
+            ]
+        }
+    ],
+    "alpha": [1,2,3,4],
+    "startState": "Caminhar",
+    "endStates": ["Caminhar", "Morrer"],
+    "entries":[
+      [3,2,2,1,4],
+      [3,2,2],
+      [1,2,2,3,4],
+      [1,3],
+      [1,2,2]
+    ]
+}
